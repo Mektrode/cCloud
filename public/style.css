@@ -1,0 +1,52 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono);
+
+@media all and (max-width: 640px) and (min-width: 0px) {
+  .container {
+    margin: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  #chatEntries {
+    height: 40%;
+  }
+}
+
+.container {
+    text-align: center;
+    border: 1px solid black;
+    width: 50%;
+    margin-left: 25%;
+}
+
+#chatEntries {
+  display: none;
+	border-top: rgb(197, 196, 196) 0.5px solid;
+	margin-left: 24%;
+	margin-right: 24%;
+
+  width: auto;
+  height: 60%; /* fixed height of div */  
+  -webkit-overflow-scrolling: touch; /* allow touch scrolling in webkit browsers */
+
+  overflow: scroll; /* set overflow to scroll for desktop browsers */
+  overflow-x: hidden; /* hide scrollbar on x-axis */
+
+}
+
+.message{
+	font-family: 'Ubuntu Mono';
+	width: 100%;
+	text-align: left;
+
+}
+.right {
+  text-align: right !important;
+}
+
+#pseudoInput{
+  margin-bottom: 20px;
+}
+
+.error {
+    border:1px solid #ff0000;
+}

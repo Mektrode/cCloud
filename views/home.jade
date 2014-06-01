@@ -1,0 +1,46 @@
+html
+  head
+    title Chat
+    meta(name='viewport', content='width=device-width, user-scalable=no')
+    link(rel='stylesheet', href='style.css')
+    script(src='//www.parsecdn.com/js/parse-1.2.18.min.js')
+    script(src='http://code.jquery.com/jquery-1.7.1.min.js')
+    script(src='/socket.io/socket.io.js')
+    script(src='https://mandrillapp.com/api/docs/js/mandrill.js')
+    script(src='script.js')
+  body
+    .container
+      header
+        h1 A Chat application 
+        h3 with Node.js and Socket.io
+      input#pseudoInput(type='text')
+      br
+      input#pass(type='password')
+      br
+      button#pseudoSet Login
+      button#signUp Sign Up
+      input#newUserName(type='text')
+      br
+      input#newPass(type='password')
+      br
+      input#newEmail(type='text')
+      br
+      button#sign Done
+      #setUp
+        h2 First Time Set Up
+        h4 What A-Levels do you do?
+        div
+          //
+            Subject and Exam Board
+        p What sixth form/college do you attend?
+        input(type='text')
+      #chatEntries
+      #chatControls
+        input#messageInput(type='text')
+        button#submit Send
+        #nbUsersDiv
+        p
+          | There is 
+          span#nb   0 
+          span(style='color: #4bff2c;')  connected 
+          | user(s).

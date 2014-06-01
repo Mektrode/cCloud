@@ -1,0 +1,118 @@
+<html>
+  <head>
+    <title>Chat</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no"/>
+
+    <link rel="stylesheet" href="style.css"/>
+    
+    <script src="//www.parsecdn.com/js/parse-1.2.18.min.js"></script>
+
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="https://mandrillapp.com/api/docs/js/mandrill.js"></script>
+    <script src="script.js"></script>
+    
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>A Chat application </h1>
+        <h3>with Node.js and Socket.io</h3>
+      </header>
+      <input id="pseudoInput" type="text"/><br>
+      <input id="pass" type="password"/>
+      <button id="pseudoSet">Login</button>
+      <button id="signUp">Sign Up</button>
+      
+      <input id="newUserName" type="text"/><br>
+      <input id="newPass" type="password"/><br>
+      <input id="newEmail" type="email"/><br>
+
+      <button id="sign">Done</button>
+      
+      <div id="setUp">
+        <h2>First Time Set Up</h2>
+        <h4>What A-Levels do you do?</h4>
+
+        <p>AUTOMATIC SERVICE
+          <select id="year">
+            <option value="non">Nothing</option>
+          </select>
+          <select id="subject">
+            <option value="non">Nothing</option>
+          </select>
+          <select id="examBoard">
+            <option value="non">Nothing</option>
+          </select>
+        </p>
+
+        <p>First Option<select> 
+          <option value="non">Nothing</option>
+          <option value="Physics">Physics</option>
+          <option value="Maths">Maths</option>
+          <option value="Further_Maths">Further Maths</option>
+          <option value="Chemistry">Chemistry</option>
+          <option value="Economics">Economics</option>
+          <option value="Psychology">Psychology</option>
+          <option value="Sociology">Sociology</option>
+          <option value="Biology">Biology</option>
+          <option value="Law">Law</option>
+          <option value="Computing">Computing</option>
+          <option value="French">French</option>
+        </select></p>  
+        <p>Second Option<select> 
+          <option value="non">Nothing</option>
+          <option value="Physics">Physics</option>
+          <option value="Maths">Maths</option>
+          <option value="Further_Maths">Further Maths</option>
+          <option value="Chemistry">Chemistry</option>
+          <option value="Economics">Economics</option>
+          <option value="Psychology">Psychology</option>
+          <option value="Sociology">Sociology</option>
+          <option value="Biology">Biology</option>
+          <option value="Law">Law</option>
+          <option value="Computing">Computing</option>
+          <option value="French">French</option>
+        </select></p>  
+        <p>Third Option<select> 
+          <option value="non">Nothing</option>
+          <option value="Physics">Physics</option>
+          <option value="Maths">Maths</option>
+          <option value="Further_Maths">Further Maths</option>
+          <option value="Chemistry">Chemistry</option>
+          <option value="Economics">Economics</option>
+          <option value="Psychology">Psychology</option>
+          <option value="Sociology">Sociology</option>
+          <option value="Biology">Biology</option>
+          <option value="Law">Law</option>
+          <option value="Computing">Computing</option>
+          <option value="French">French</option>
+        </select></p>  
+        <p>Fourth Option<select> 
+          <option value="non">Nothing</option>
+          <option value="Physics">Physics</option>
+          <option value="Maths">Maths</option>
+          <option value="Further_Maths">Further Maths</option>
+          <option value="Chemistry">Chemistry</option>
+          <option value="Economics">Economics</option>
+          <option value="Psychology">Psychology</option>
+          <option value="Sociology">Sociology</option>
+          <option value="Biology">Biology</option>
+          <option value="Law">Law</option>
+          <option value="Computing">Computing</option>
+          <option value="French">French</option>
+        </select></p>        
+
+        <p>What sixth form/college do you attend?</p><!--Search box of sixthforms in the country would be ideal--><input id="college" type="text"/>
+      </div>
+
+      <div id="chatEntries"></div>
+      <div id="chatControls">
+        <input id="messageInput" type="text"/>
+        <button id="submit">Send</button>
+        <div id="nbUsersDiv"></div>
+        <p>There is <span id="nb"> 0 </span><span style="color: #4bff2c;"> connected </span>user(s).</p>
+      </div>
+    </div>
+  </body>
+</html>
