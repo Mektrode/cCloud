@@ -239,7 +239,7 @@ socket.on('nbUsers', function(msg) {
 
 //get new messages from other clients
 socket.on('message', function(data) {
-    addMessage(data['message'], data['pseudo']);
+    addMessage(data['message'], data['name']);
     resetScroll();
     console.log(data);
 });
