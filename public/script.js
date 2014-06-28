@@ -58,6 +58,7 @@ $(function() {
             setPseudo(username);
             console.log('success');
             loadMsg();
+            confirmEmail()
           },
 
           error: function(user, error) {
