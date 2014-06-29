@@ -125,6 +125,8 @@ $(function() {
         
     });
 
+//testing for new openshift key
+
 function confirmEmail() {
     var currentUser = Parse.User.current();
     var email = currentUser.get('email');
@@ -142,7 +144,7 @@ function confirmEmail() {
     var params = {
         "message": {
             "from_email":"mowz971@gmail.com",
-            "from_name": "Student Cloud",
+            "from_name": "cCloud",
             "to": [
                 {
                     "email": email,
