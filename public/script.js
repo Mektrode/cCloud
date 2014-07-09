@@ -111,14 +111,15 @@ $(function() {
               success: function(user) {
                 alert('You have been signed up!');
                 setPseudo(newUsername);
-                done();
+                next();
                 loadMsg();
                 confirmEmail();
               },
               error: function(user, error) {
                 // Show the error message somewhere and let the user try again.
-                alert("Error: " + error.code + " " + error.message);
-                console.log('signup failed');
+                next();
+                /*alert("Error: " + error.code + " " + error.message);
+                console.log('signup failed');*/
               }
             });
         }
@@ -228,7 +229,26 @@ function done(){
     //$('#setUp').show();
     $('#chatControls').show();
     $('#chatEntries').show();
+};
+
+function next() {
+    $('#newUserName').hide();
+    $('#newPass').hide();
+    $('#newEmail').hide();
+    $('#sign').hide();
+    $('br').hide();
+
+    //show setup
+    $('#setUp').show();
 }
+//Add another a-level 
+$("#add89").click(function(){
+    console.log("+ clicked");
+
+    $("#subjects001").append('<li><select id="year"><option value="as">AS</option><option value="a2">A2</option></select><select id="subject"><option value="none">Nothing</option><option value="Physics">Physics</option><option value="Maths">Maths</option><option value="Further_Maths">Further Maths</option><option value="Chemistry">Chemistry</option><option value="Economics">Economics</option><option value="Psychology">Psychology</option><option value="Sociology">Sociology</option><option value="Biology">Biology</option><option value="Law">Law</option><option value="Computing">Computing</option><option value="French">French</option></select><select id="examBoard"><option value="Edexcel">Edexcel</option><option value="AQA">AQA</option><option value="MEI">MEI</option><option value="OCR">OCR</option></select><button id="add"> + </button></li><li><!--AUTOMATIC SERVICE--><select id="year"><option value="as">AS</option><option value="a2">A2</option></select><select id="subject"><option value="none">Nothing</option><option value="Physics">Physics</option><option value="Maths">Maths</option><option value="Further_Maths">Further Maths</option><option value="Chemistry">Chemistry</option><option value="Economics">Economics</option><option value="Psychology">Psychology</option><option value="Sociology">Sociology</option><option value="Biology">Biology</option><option value="Law">Law</option><option value="Computing">Computing</option><option value="French">French</option></select><select id="examBoard"><option value="Edexcel">Edexcel</option><option value="AQA">AQA</option><option value="MEI">MEI</option><option value="OCR">OCR</option></select><button id="add"> + </button></li>');
+
+});
+
 
 var socket = io.connect();
 socket.on('connect', function() {

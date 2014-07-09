@@ -28,14 +28,15 @@
       <input id="newPass" type="password" placeholder="Password"/><br>
       <input id="newEmail" type="email" placeholder = "Email"/><br>
 
-      <button id="sign">Done</button>
+      <button id="sign">Next</button>
       
       <div id="setUp">
         <h2>First Time Set Up</h2>
 
         <h4>What A-Levels do you do?</h4>
 
-        <p><!--AUTOMATIC SERVICE-->
+        <nav id="subjects001">
+          <li><!--AUTOMATIC SERVICE-->
           <select id="year">
             <option value="as">AS</option>
             <option value="a2">A2</option>
@@ -60,12 +61,18 @@
             <option value="MEI">MEI</option>
             <option value="OCR">OCR</option>
           </select>
-        </p>
+          <button id="add89"> + </button>
+          </li>
+        </nav> 
 
         <p>What sixth form/college do you attend?</p><!--Search box of sixthforms in the country would be ideal-->
-        <input id="college" type="text"/>
+        <input id="college" type="text"/><br>
 
-        <button id="submitInfo"></button>
+        <button id="submitInfo">Done</button>
+      </div>
+
+      <div id="hallroom">
+
       </div>
 
       <div id="chatEntries"></div>

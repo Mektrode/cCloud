@@ -11,9 +11,9 @@ html
   body
     .container
       header
-        h1 Student Cloud 
+        h1 Student Cloud
         h3 with Node.js and Socket.io
-      input#pseudoInput(type='text',placeholder='Username')
+      input#pseudoInput(type='text', placeholder='Username')
       br
       input#pass(type='password', placeholder='Password')
       br
@@ -25,39 +25,43 @@ html
       br
       input#newEmail(type='email', placeholder='Email')
       br
-      button#sign Done
+      button#sign Next
       #setUp
         h2 First Time Set Up
         h4 What A-Levels do you do?
-        p
-          //
-            AUTOMATIC SERVICE
-          select#year
-            option(value='as') AS
-            option(value='a2') A2
-          select#subject
-            option(value='none') Nothing
-            option(value='Physics') Physics
-            option(value='Maths') Maths
-            option(value='Further_Maths') Further Maths
-            option(value='Chemistry') Chemistry
-            option(value='Economics') Economics
-            option(value='Psychology') Psychology
-            option(value='Sociology') Sociology
-            option(value='Biology') Biology
-            option(value='Law') Law
-            option(value='Computing') Computing
-            option(value='French') French
-          select#examBoard
-            option(value='Edexcel') Edexcel
-            option(value='AQA') AQA
-            option(value='MEI') MEI
-            option(value='OCR') OCR
+        nav#subjects001
+          li
+            //
+              AUTOMATIC SERVICE
+            select#year
+              option(value='as') AS
+              option(value='a2') A2
+            select#subject
+              option(value='none') Nothing
+              option(value='Physics') Physics
+              option(value='Maths') Maths
+              option(value='Further_Maths') Further Maths
+              option(value='Chemistry') Chemistry
+              option(value='Economics') Economics
+              option(value='Psychology') Psychology
+              option(value='Sociology') Sociology
+              option(value='Biology') Biology
+              option(value='Law') Law
+              option(value='Computing') Computing
+              option(value='French') French
+            select#examBoard
+              option(value='Edexcel') Edexcel
+              option(value='AQA') AQA
+              option(value='MEI') MEI
+              option(value='OCR') OCR
+            button#add89  + 
         p What sixth form/college do you attend?
         //
           Search box of sixthforms in the country would be ideal
         input#college(type='text')
-        button#submitInfo
+        br
+        button#submitInfo Done
+      #hallroom
       #chatEntries
       #chatControls
         input#messageInput(type='text')
